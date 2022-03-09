@@ -15,7 +15,13 @@ function changeColor(event){
     event.target.classList.add('mouseOver');
 }
 
-function clear(){
-    let block = document.getElementsByClassName('mouseOver');
+function clearGrid(){
+    const grid = document.querySelector('#grid');
+    let size = prompt('How many squares per side do you want on the new grid?', "16");
+    while(grid.firstChild){
+        grid.removeChild(grid.firstChild);
+    }
+    makeGrid(+size); //Unary + converts string to number
 }
+
 makeGrid(30);
