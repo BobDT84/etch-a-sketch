@@ -18,9 +18,10 @@ button {
 
 #grid {
     display: grid;
-    max-width: 960px;
-    min-width: 960px;
+    width: 100vw;
     height: 100vh;
+    max-width: 960px;
+    max-height: 960px;
 }
 
 .mouseOver {

@@ -17,7 +17,8 @@ function changeColor(event){
 
 function clearGrid(){
     const grid = document.querySelector('#grid');
-    let size = prompt('How many squares per side do you want on the new grid?', "16");
+    let size = prompt('How many squares per side do you want on the new grid? Maximum of 100', "16");
+    if(size>100) size = 100;
     while(grid.firstChild){
         grid.removeChild(grid.firstChild);
     }
